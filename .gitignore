@@ -1,0 +1,19 @@
+# Python-related
+__pycache__/
+*.py[cod]
+*.log
+
+# Virtual environments
+venv/
+.env
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# IDEs
+.idea/
+.vscode/
+
+# Misc
+*.sqlite3
