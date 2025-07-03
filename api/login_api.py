@@ -9,8 +9,8 @@ def get_api_token(username, password):
     }
     headers = { "Content-Type": "application/json" }
     response = requests.post(url, json=payload, headers=headers)
-    print("Login status:", response.status_code)
-    print("Login response body:", response.text)
+   # print("Login status:", response.status_code)
+   # print("Login response body:", response.text)
     if response.status_code == 200:
         return response.json().get("accessToken")
     return None
