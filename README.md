@@ -1,5 +1,4 @@
 # gametwist-automation
-# 🎮 GameTwist Automation Suite
 
 This is a test automation project for the GameTwist casino web application. It uses **Python**, **Selenium**, **Behave (BDD)**, and **API testing** to validate key features such as login, balance match, and favorite game functionality.
 
@@ -54,7 +53,7 @@ Chrome browser installed
 ChromeDriver compatible with your Chrome version
 Git
 
-Install Dependencies
+**Install Dependencies**
 pip install -r requirements.txt
 
 (If you don’t have requirements.txt, manually install these:)
