@@ -16,26 +16,18 @@ def find_game_card(driver, game_name):
     return None
 
 def mark_favorite(driver, game_card):
-    try:
-        heart_icon = game_card.find_element(By.XPATH, ".//a[contains(@class, 'c-game__fav')]")
-        if "is-favorite" not in heart_icon.get_attribute("class"):
-            heart_icon.click()
-            print("✅ Marked as favorite")
-        else:
-            print("⚠️ Already marked as favorite")
-    except Exception as e:
-        print(f"❌ Could not mark favorite: {e}")
+    heart_icon = game_card.find_element(By.XPATH, ".//a[contains(@class, 'c-game__fav')]")
+    if "is-favorite" not in heart_icon.get_attribute("class"):
+        heart_icon.click()
+        return True
+    return False
 
 def unmark_favorite(driver, game_card):
-    try:
-        heart_icon = game_card.find_element(By.XPATH, ".//a[contains(@class, 'c-game__fav')]")
-        if "is-favorite" in heart_icon.get_attribute("class"):
-            heart_icon.click()
-            print("✅ Unmarked as favorite")
-        else:
-            print("⚠️ Already unmarked")
-    except Exception as e:
-        print(f"❌ Could not unmark favorite: {e}")
+    heart_icon = game_card.find_element(By.XPATH, ".//a[contains(@class, 'c-game__fav')]")
+    if "is-favorite" in heart_icon.get_attribute("class"):
+        heart_icon.click()
+        return True
+    return False
 
 def is_favorite(driver, game_card):
     heart_icon = game_card.find_element(By.XPATH, ".//a[contains(@class, 'c-game__fav')]")
